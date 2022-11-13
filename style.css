@@ -1,0 +1,41 @@
+div#div_content{	
+	/*Set background color to white*/
+	background-color:white;
+	padding:1em;
+}
+.textbox{
+    color:black;
+    border:1px black solid;
+    border-radius: 7px;
+    width:30%;
+    height:30px;
+    margin-bottom:20px;
+}
+.btn-submit{
+  background:black;
+  position:right;
+  color:white;
+  width:30%;
+  height:30px;
+  border:black;
+  border-radius: 9px;
+  margin:20px;
+
+}
+.btn-submit:hover{
+  color:grey;
+}
+
+.center{
+	text-align:center;
+}
+.form label{
+	display: block;
+	text-align:left;
+  margin-left:35%;
+	width: 300px;
+	/*Set float property to left so that the labels are on the left of text fields*/
+  float:top;
+
+
+}
