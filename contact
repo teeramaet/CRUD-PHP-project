@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="contactstyle.css">
+    </head>
+<div class="main">
+    <body>
+        <div class="img">
+            <img src="business-man.png" width="250" height="250">
+        </div>
+
+        <div class="img2">
+            <img src="business-man.png" width="250" height="250">
+        </div>
+
+        <div class = "command">
+            <a> CONTACT</a>
+            <a> RESULT</a>
+            <a> COUNTRY</a>
+            <a> PROFILE</a>
+            <a> LOGIN</a>
+        </div>
+
+
+        <div class ="first">
+            <h1>CONTACT US</h1>
+        </div>
+
+        <div class ="second">
+            <p>Ocenia/Europe</p>
+        </div>
+
+        <div class ="third">
+            <p>Ms.Panyaphat Sommai</p>
+            <p>Position:Regional coordinator(incoming and outgoing)</p>
+            <p>Tel. +66(0)2 613 3023</p>
+            <p>E-mail:panyaphat.s@oia.tu.ac.th</p>
+               
+        </div>
+
+        
+
+        <div class ="fourth">
+            <p>Mr.Tatthana Swatdiwetin</p>
+            <p>Position:Regional coordinator(incoming and outgoing)</p>
+            <p>Tel. +66(0)2 613 2047</p>
+            <p>E-mail:tatthana.s@oia.tu.ac.th</p>
+                
+        </div>
+
+    </body>
+</div>
+</html>
+        
+
