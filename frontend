@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <div class = "big">
+        <head>
+            <title>Exchange Program</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        
+        
+        <body>
+            <div class ="main">
+
+                <div class ="flag">
+                    <img src="flag.png" width="500" height="500">
+                </div>
+
+                <div class = "command">
+                    <a> CONTACT</a>
+                    <a> RESULT</a>
+                    <a> COUNTRY</a>
+                    <a> PROFILE</a>
+                    <a> LOGIN</a>
+                </div>
+                
+                <div class = "top">
+                    <h1>
+                        EXCHANGE 
+                    </h1>
+                    <h1>
+                        PROGRAM
+                    </h1>
+                </div>
+
+                
+                <div class="second">
+                    <p>
+                        Hello guys! we are from group 5
+                        
+                    </p>
+                    <p>
+                        This project aims to help students plan their path in exchange track based on 
+                    </p>
+                    <p>
+                        other's opinion and statistics
+                    </p>
+                </div>
+
+
+                <div class ="box">
+                    <input type="submit" value="GET STARTED">
+                </div>
+
+                <div class = "location">
+                    <h2>
+                        Location
+                    </h2>
+                    <p>
+                        Hello guys! we are from group 5
+                    </p>
+                    <p>
+                        This project aims to help students plan their path in exchange track based on 
+                    </p>
+                    <p>
+                        other's opinion and statistics
+                    </p>
+                </div>
+
+                
+                <div class= "statistic">
+                    <h2>
+                        Statistics
+                    </h2>
+                    <p>
+                        Hello guys! we are from group 5
+                        
+                    </p>
+                    <p>
+                        This project aims to help students plan their path in exchange track based on 
+                    </p>
+                    <p>
+                        other's opinion and statistics
+                    </p>
+                    <p>
+                        Hello guys! we are from group 5
+                        
+                    </p>
+                    <p>
+                        This project aims to help students plan their path in exchange track based on 
+                    </p>
+                    <p>
+                        other's opinion and statistics
+                    </p>
+                </div>
+
+                
+
+            
+        </div>
+
+        </body>
+    
+    </div>
+</html>
