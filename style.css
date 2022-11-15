@@ -1,56 +1,81 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+body
+{
+    background-color:antiquewhite;
 }
-body {
-  display: flex;
-}
-div#div_content {
-  /*Set background color to white*/
-  background-color: white;
-  padding: 1em;
-}
-.div1 {
-  width: 60%;
-}
-.div2 {
-  width: 40%;
-}
-img {
-  display: inline-block;
-}
-.textbox {
-  color: black;
-  border: 1px black solid;
-  border-radius: 7px;
-  width: 30%;
-  height: 30px;
-  margin-bottom: 20px;
-}
-.btn-submit {
-  background: black;
-  position: right;
-  color: white;
-  width: 30%;
-  height: 30px;
-  border: black;
-  border-radius: 9px;
-  margin: 20px;
-}
-.btn-submit:hover {
-  color: grey;
+.top{
+    font-family: sans-serif;
+    font-size:150%;
+    padding :5px;
+    line-height:1;
+
 }
 
-.center {
-  text-align: center;
+.second
+{
+    position: absolute;
+    bottom:480px;
+    width: 500px;
+    padding:10px;
 }
-.form label {
-  display: block;
-  text-align: left;
-  margin-left: 35%;
-  width: 300px;
-  /*Set float property to left so that the labels are on the left of text fields*/
-  float: top;
+
+
+.command
+{
+    text-align : right;
+    padding : 10px;
+    word-spacing: 30px;
 }
+
+.box
+{
+    background: rgb(236, 213, 177);
+    border-radius: 7px;
+    box-sizing: content-box;
+    position: absolute;
+    bottom:420px;
+    width: 95px;
+    padding:10px;
+    
+}
+
+.location
+{
+    border-radius: 7px;
+    background-color: rgb(246, 213, 180);
+    position: fixed;
+    bottom:200px;
+    width: 500px;
+    padding:10px;
+}
+
+.statistic
+{
+    border-radius: 7px;
+    background-color: rgb(236, 186, 137);
+    position:fixed;
+    bottom:200px;
+    right:200px;
+    width:500px;
+    padding:10px;
+    
+}
+
+
+.flag
+{
+    position:fixed;
+    bottom:400px;
+    right:400px;
+    width:500px;
+    padding:10px;
+}
+
+.big
+{
+    
+    width: 1050px;
+    margin: auto;
+}
+
+
+
