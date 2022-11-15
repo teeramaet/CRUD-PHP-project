@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="advisorstyle.css">
+    </head>
+<div class =" main">
+    <body>
+
+        <div class = "command">
+            <a> CONTACT</a>
+            <a> RESULT</a>
+            <a> COUNTRY</a>
+            <a> PROFILE</a>
+            <a> LOGIN</a>
+        </div>
+        
+        <div class="image">
+            <img src="university.png" width="600" height="300" class="center">
+        </div>
+
+        <div class="first">
+            <h1>Please contact your advisor</h1>
+        </div>
+
+        <div class="second">
+            <p>Your 1st choice: University name</p>
+        </div>
+
+        <div class="third">
+            <p>Your 1st choice: University name</p>
+        </div>
+
+        <div class="fourth">
+            <p>Your 1st choice: University name</p>
+        </div>
+
+    </body>
+</div>
+
+</html>
