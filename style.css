@@ -3,6 +3,17 @@ div#div_content{
 	background-color:white;
 	padding:1em;
 }
+.div1{
+  width:60%;
+  display:flex
+}
+.div2{
+  width:40%;
+  display:flex
+}
+.body{
+  display:flex;
+}
 .textbox{
     color:black;
     border:1px black solid;
