@@ -14,11 +14,11 @@
         </div>
 
         <div class = "command">
-            <a> CONTACT</a>
-            <a> RESULT</a>
-            <a> COUNTRY</a>
-            <a> PROFILE</a>
-            <a> LOGIN</a>
+        <a href="frontend">FIRST-PAGE</a>
+        <a href="congrat">RESULT</a>
+        <a href="progress">COUNTRY</a>
+        <a> PROFILE</a>
+        
         </div>
 
 

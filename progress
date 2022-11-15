@@ -7,11 +7,12 @@
     <body>
 
         <div class = "command">
-            <a> CONTACT</a>
-            <a> RESULT</a>
-            <a> COUNTRY</a>
+            <a href="frontend">FIRST-PAGE</a>
+            <a href="contact">CONTACT</a>
+            <a href="congrat">RESULT</a>
+            
             <a> PROFILE</a>
-            <a> LOGIN</a>
+          
         </div>
         
         <div class="image">
