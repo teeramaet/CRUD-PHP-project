@@ -1,42 +1,136 @@
-div#div_content{ 
-    padding:5em;
-    background-color:white;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+html,
+body,
+#root,
+#root > div,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  font-family: "Playfair Display", sans-serif;
+  height: 6.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fffefa;
+  padding-left: 30%;
+}
+.content {
+  display: flex;
+  height: 93.5%;
+}
+.contact,
+.result,
+.country,
+.profile,
+.login {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-right: 1.5em;
+  text-decoration: none;
+}
+.left {
+  width: 55%;
+  height: 100%;
+  background-color: #f7f3eb;
+  z-index: -999;
+}
+.right {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffefa;
+  z-index: 2;
+}
+h1 {
+  margin-bottom: 10%;
+  font-size: 3rem;
+  font-weight: 500;
+}
+label {
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+.form-style {
+  width: 80%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+input {
+  color: black;
+  border: 1px black solid;
+  border-radius: 8px;
+  width: 100%;
+  height: 40%;
+}
+.submit {
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: #fffefa;
+  background-color: #242826;
+}
+.ID,
+.fullName,
+.password {
+  width: 100%;
+  height: 100%;
+}
+.submit {
+  margin-bottom: 10%;
+}
+p {
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+a {
+  text-decoration: underline;
+  color: #242826;
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+.pic-1 {
+  position: absolute;
+  width: 30%;
+  height: 47%;
+  left: -4.24%;
+  top: 20.69%;
 
-   }
-   body{
-    display:flex;
-    background-color:antiquewhite;
-   }
-   .textbox{
-    color:black;
-    border:1px black solid;
-    border-radius: 7px;
-    width:100%;
-    height:30px;
-    margin-bottom:20px;
-   }
-   .btn-create{
-    background:black;
-    position:right;
-    color:white;
-    width:100%;
-    height:30px;
-    border:black;
-    border-radius:9px;
-    margin-bottom: 20px;
-   
-   }
-   .btn-create:hover{
-    color:antiquewhite;
-   }
-   
-   .center{
-    text-align:center;
-   }
-   .form label{
-    display: block;
-    text-align:left;
-    width: 600px;
-    float:top;
-   }
-   
+  background: url(5667d8c5c037e927626cff99db09e7d5.jpg);
+
+  box-shadow: 4px 8px 6px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-7.16deg);
+  z-index: -2;
+}
+.pic-2 {
+  position: absolute;
+  width: 23.6875%;
+  height: 46.32%;
+  left: 33.26%;
+  top: 43.32%;
+
+  background: url(54b4a07bbfa49f530c14837e84191a80.jpg);
+  /* drop */
+
+  box-shadow: 4px 8px 6px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(6.36deg);
+  z-index: -2;
+}
