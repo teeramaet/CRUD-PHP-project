@@ -1,28 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <link rel="stylesheet" href="editProfilestyle.css" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="editProfileStyle.css" />
   <body>
-    <img src="/assets/dog.jpg" height="100%" width="50%" alt="pic" />
+    <nav class="navbar">
+      <a class="contact">CONTACT</a>
+      <a class="result">RESULT</a>
+      <a class="country">COUNTRY</a>
+      <a class="result">RESULT</a>
+      <a class="country">COUNTRY</a>
+      <a class="profile">PROFILE</a>
+    </nav>
+    <div class="content">
+      <div class="pic-1"></div>
+      <div class="pic-2"></div>
+      <div class="left"></div>
+      <div class="right">
+        <h1>EDIT PROFILE</h1>
+        <form class="form-style" action="">
+          <div class="ID">
+            <label>Student ID</label>
+            <input type="text" />
+          </div>
 
-    <div class="center" id="div_content">
-      <form action="">
-        <h2 class="heading">EDIT PROFILE</h2>
-        <div  class="form">
-          <label>Student ID</label>
-          <input class="textbox" type="text" />
-          
-          <label>Full name</label>
-          <input class="textbox" type="text" />
-          
-          <label>Password</label>
-          <input class="textbox" type="password" />
-          
-          <label>Confirm Password</label>
-          <input class="textbox" type="password" />
+          <div class="fullName">
+            <label>Full name</label>
+            <input type="text" />
+          </div>
 
-        </div>
-        <input type="submit" value="Save" class="btn-submit" />
-      </form>
+          <div class="password">
+            <label>Password</label>
+            <input type="password" />
+          </div>
+
+          <div class="password">
+            <label>Confirm Password</label>
+            <input type="password" />
+          </div>
+
+          <input type="submit" value="Save" class="submit" />
+        </form>
+      </div>
     </div>
   </body>
 </html>
