@@ -64,8 +64,10 @@ h1 {
   display: inline-block;
   line-height: 1.2;
 }
+p {
+  font-family: "Source sans pro", sans-serif;
+}
 .left > p {
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.625rem;
   font-weight: 400;
   margin-bottom: 5%;
