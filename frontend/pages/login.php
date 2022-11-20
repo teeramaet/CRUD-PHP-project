@@ -4,9 +4,25 @@
 	$fullname = $_POST['fullname'];
 	$password = $_POST['password'];
 
-	$q="SELECT `Password` FROM `student` where student_ID='$student_ID' and `name`='$fullname'";
-	$result=$mysqli->query($q);
-	$row=$result->fetch_array();
+	$sanitized_student_ID = mysqli_real_escape_string($db, $student_ID);
+	$sanitized_fullname = mysqli_real_escape_string($db, $fullname);
+	$sanitized_password = mysqli_real_escape_string($db, $password);
+
+	$q="SELECT `Password` FROM `student` where student_ID='" 
+    . $sanitized_student_ID . "' AND name = '" 
+    . $sanitized_fullname . "'";
+	$result=$mysqli_query($db, $sql)
+		or die(mysqli_error($db));
+
+	$num = mysqli_fetch_array($result);
+
+	if($num > 0)
+	{
+		echo "Login Success";
+	}
+	else{
+		echo "Wrong User id or password";
+	}
 
 	
 	//no username
@@ -29,9 +45,21 @@
 		//เอา username ส่งไปด้วย
     }
 	
-    $q="SELECT `Password` FROM `advisor` where ID='$student_ID' and `name`='$fullname'";
-	$result=$mysqli->query($q);
-	$row=$result->fetch_array();
+    $q="SELECT `Password` FROM `advisor` where ID" 
+    . $sanitized_student_ID . "' AND name = '" 
+    . $sanitized_fullname . "'";
+	$result=$mysqli_query($db, $sql)
+		or die(mysqli_error($db));
+
+	$num = mysqli_fetch_array($result);
+
+	if($num > 0)
+	{
+		echo "Login Success";
+	}
+	else{
+		echo "Wrong User id or password";
+	}
 	
 	//no username
 	if(!$result){
