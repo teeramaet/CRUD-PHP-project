@@ -50,7 +50,7 @@
           <div class="container">
             <div class="container-between">
               <h3><?= $row['University_name'] ?></h3>
-              <b>MORE</b>
+              <a href="<?="countryInfo.php?ID=".$row['ID']?>"<b>MORE</b></a>
             </div>
             <h4><?= $row['Country'] ?></h4>
             <h4><?= "GPA Requirement: ".$row['GPA_Requirement'] ?></h4>

@@ -72,13 +72,15 @@ h1 {
   font-weight: 600;
 }
 h2,
-b {
+.confirm > b {
   font-family: "Source sans pro", sans-serif;
   font-size: 2rem;
   margin-bottom: 7%;
 }
-h2 {
-  font-weight: 400;
+container-between > b {
+  font-size: 1.25rem;
+  font-family: "Source sans pro", sans-serif;
+  text-decoration: underline;
 }
 .university,
 .confirm {
@@ -162,4 +164,7 @@ p {
   font-size: 1.25rem;
   font-weight: 800;
   text-decoration: underline;
+}
+a {
+  text-decoration: none;
 }
