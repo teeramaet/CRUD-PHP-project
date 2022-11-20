@@ -1,20 +1,22 @@
 <?php
+    session_start();
 	require_once('connect.php');
-	$Student_ID = $_POST['ID'];
+	$Student_ID = $_SESSION["user_ID"] ;
     $fullname = $_POST['fullname'];
+    $gpa = $_POST['GPA'];
+    $eng = $_POST['Eng_sco'];
     $npassword = $_POST['npassword'];
-    $cpassword = $_POST['cpassword'];
+    $opassword = $_POST['opassword'];
 
-	$q="SELECT * From Student WHERE password='$cpassword' and Student_ID ='$Student_ID'";
+	$q="SELECT * From Student WHERE password='$opassword' and Student_ID ='$Student_ID'";
     $result=$mysqli->query($q);
-    print $result->num_rows;
+    
     if($result->num_rows != 1){
         //$message="Wrong password";
         header("Location: editProfilePage.html"); 
-    }
-
+    }else{
     $q="UPDATE student
-    SET Name='$fullname', Password='$npassword'
+    SET Name='$fullname', Password='$npassword',GPA='$gpa',EngScore='$eng'
     where Student_ID='$Student_ID'";
     $result=$mysqli->query($q);
     if(!$result){
@@ -23,8 +25,8 @@
     }
     //redirect ไปไหน?
     //$message="success" ;
-	header("Location: editProfilePage.html"); 
-	
+	header("Location: countryPage.php"); 
+    }
 	
 
 

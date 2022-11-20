@@ -27,7 +27,7 @@
           <?php 
           session_start();
           $use_ID=$_SESSION["user_ID"];
-
+          
           require_once('connect.php');
           $q="SELECT s.name,s.GPA,u.University_name,u.Mangaeby,p.id FROM student s Join progress p on s.Student_ID=p.Student_ID Join program pr on pr.Program_ID= p.Program_ID Join university u on u.ID =pr.universityID WHERE p.status=0 and u.Mangaeby='$use_ID';";
           $result=$mysqli->query($q);
