@@ -55,7 +55,7 @@
             <h4><?= $row['Country'] ?></h4>
             <h4><?= "GPA Requirement: ".$row['GPA_Requirement'] ?></h4>
             <h4><?= "English score: ".$row['Engscore_Requirement'] ?></h4>
-            <textarea name="" id="">Input your reason</textarea>
+            <textarea name="" id="" placeholder="Input your reason"></textarea>
             <div class="add">
               <p>Add</p>
             </div>
