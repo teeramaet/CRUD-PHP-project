@@ -46,14 +46,19 @@ require_once('connect.php');
           <div class="container">
             <div class="container-between">
               <h3><?= $row['University_name'] ?></h3>
-              <a href="<?="countryInfo.php?ID=".$row['ID']?>"<b>MORE</b></a>
+              <a href="<?="countryInfo.php?ID=".$row['ID']?>,p_id=<?= $row['Program_ID'] ?>"<b>MORE</b></a>
             </div>
             <h4><?= $row['Country'] ?></h4>
             <h4><?= "GPA Requirement: ".$row['GPA_Requirement'] ?></h4>
             <h4><?= "English score: ".$row['Engscore_Requirement'] ?></h4>
-            <textarea name="" id="" placeholder="Input your reason"></textarea>
             
-            <form action="" method="post" class="add">
+            
+            <form action="countryPageadd.php" method="POST" class="">
+            <textarea name="essay" id="" placeholder="Input your reason"></textarea>
+              <input type='hidden' name="id" value='<?=$row['ID']?>'>
+              <input type='hidden' name="p_ID" value='<?=$row['Program_ID']?>'>
+              <input type='hidden' name="acb" value='<?=$row['Mangaeby']?>'>
+  
               <input type="submit" name="add" value="Add" class="add">
             </form>
           </div>
