@@ -2,9 +2,9 @@
 session_start();
 
 require_once('connect.php');
-$student_ID = $_POST['id'];
-$fullname = $_POST['fullname'];
-$password = $_POST['password'];
+$student_ID = $mysqli -> real_escape_string($_POST['id']);
+$fullname = $mysqli -> real_escape_string($_POST['fullname']);
+$password = $mysqli -> real_escape_string($_POST['password']);
 
 
 $q2="SELECT Password FROM advisor where ID='$student_ID' and `name`='$fullname'";

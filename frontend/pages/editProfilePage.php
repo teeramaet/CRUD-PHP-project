@@ -1,12 +1,12 @@
 <?php
     session_start();
 	require_once('connect.php');
-	$Student_ID = $_SESSION["user_ID"] ;
-    $fullname = $_POST['fullname'];
-    $gpa = $_POST['GPA'];
-    $eng = $_POST['Eng_sco'];
-    $npassword = $_POST['npassword'];
-    $opassword = $_POST['opassword'];
+	$Student_ID = $mysqli -> real_escape_string($_SESSION["user_ID"]) ;
+    $fullname = $mysqli -> real_escape_string($_POST['fullname']);
+    $gpa = $mysqli -> real_escape_string($_POST['GPA']);
+    $eng = $mysqli -> real_escape_string($_POST['Eng_sco']);
+    $npassword = $mysqli -> real_escape_string($_POST['npassword']);
+    $opassword = $mysqli -> real_escape_string($_POST['opassword']);
 
 	$q="SELECT * From Student WHERE password='$opassword' and Student_ID ='$Student_ID'";
     $result=$mysqli->query($q);

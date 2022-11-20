@@ -3,9 +3,12 @@
 
 
 	require_once('connect.php');
-	$student_ID = $_POST['id'];
-	$fullname = $_POST['fullname'];
-	$password = $_POST['password'];
+	$firstname = $mysqli -> real_escape_string($_POST['firstname']);
+	$lastname = $mysqli -> real_escape_string($_POST['lastname']);
+	$age = $mysqli -> real_escape_string($_POST['age']);
+	$student_ID = $mysqli -> real_escape_string($_POST['id']);
+	$fullname = $mysqli -> real_escape_string($_POST['fullname']);
+	$password =  $mysqli -> real_escape_string($_POST['password']);
 	
 	$q="SELECT Password FROM student where student_ID='$student_ID' and `name`='$fullname'";
 	$result=$mysqli->query($q);

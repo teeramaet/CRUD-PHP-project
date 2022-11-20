@@ -21,28 +21,13 @@ require_once('connect.php');
     </nav>
     <div class="content">
       <div class="left">
-        <?php
-        $stdID = $_SESSION['user_ID'];
-        $queryCount= "select * from student where Student_ID = $stdID";
-        $resultCount=$mysqli->query($queryCount);
-                  if(!$resultCount){
-                    echo "Select failed. Error: ".$mysqli->error ;
-                    return false;
-                  }
-        $rowCount = $resultCount->fetch_array()
-        ?>
-        <div class="credit"><h1><?= "Count left: ".$rowCount['Count']. "/3" ?></h1></div>
+        
+        <div class="credit"><h1>YOU HAVE </br>1 CREDIT</h1></div>
         <div class="university">
-          <div class="first-uni"><h2>University name</h2></div>
-          <div class="second-uni"><h2>University name</h2></div>
-          <div class="third-uni"><h2>University name</h2></div>
+          <h2>Choose your dream university</h2>
         </div>
         <div class="confirm">
-          <h2>You have select <br />all 3 universities</h2>
-          <b> Please Confirm your choice</b>
-          <form action="" method="post" class="add">
-              <input type="submit" name="confirm" value="Confirm" class="add">
-            </form>
+          <h2>Click the add button to request this program</h2>
         </div>
       </div>
       <div class="right">
@@ -75,17 +60,7 @@ require_once('connect.php');
         </div>
         <?php }
         ?>
-        <?php
-            $stdID = $_SESSION['user_ID'];
-            if( isset( $_POST['add'] ) ) {
-              $updateCount = "UPDATE student SET count = count - 1 WHERE student_ID = '$stdID';";
-              $resultupdateCount=$mysqli->query($updateCount);
-                  if(!$resultupdateCount){
-                    echo "Select failed. Error: ".$mysqli->error ;
-                    return false;
-                  }
-            }
-            ?>
+ 
         <!-- *****************************//-->
       </div>
     </div>

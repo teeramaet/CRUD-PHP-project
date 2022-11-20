@@ -2,10 +2,10 @@
 	require_once('connect.php');
 
 
-    $Student_ID = $_POST['ID'];
-	$Username = $_POST['fullname'];
-	$Password = $_POST['password'];
-	$Cpassword = $_POST['cpassword'];
+    $Student_ID = $mysqli -> real_escape_string($_POST['ID']);
+	$Username = $mysqli -> real_escape_string($_POST['fullname']);
+	$Password = $mysqli -> real_escape_string($_POST['password']);
+	$Cpassword = $mysqli -> real_escape_string($_POST['cpassword']);
 
 
 	//เช็คว่าIDซ้ำมั้ย
