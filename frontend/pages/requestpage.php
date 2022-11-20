@@ -36,7 +36,7 @@
                 echo          "<p class='choice-1'>".$row['name']."</p>";
                 echo          "<p class='choice-1'><b>Grade: </b> ".$row['GPA']."</p>";
                 echo          "<p class='choice-1'>";
-                echo          "<b>Reason: </b> .$row['essay'].
+                echo          "<b>Reason: </b>" .$row['essay']."
                           </p>";
                 echo      "</div>";
                 echo      "<p>".$row['University_name']."</p>";
