@@ -21,9 +21,6 @@
           <h1>Request</h1>
         </div>
         <div class="showResult">
-
-
-
           <?php 
           session_start();
           $use_ID=$_SESSION["user_ID"];

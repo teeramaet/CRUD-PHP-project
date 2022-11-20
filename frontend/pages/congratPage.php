@@ -43,12 +43,18 @@
           $color='red';
           
         }
-        echo "<div class='choice' style='background-color:".$color."'>";
-       
-        echo    "<p class='choice-1' >choice "."$x".": ".$row['University_name']."</p>";
+        echo "<div class='choice' style='background-color:".$color."; display:flex; justify-content: space-between; padding: 0 5%;'>";
+        
+        echo "<h1 class='choice-1'style=' font-family: \'Source Sans Pro\', sans-serif;' >Your choice : ".$row['University_name']."</h1>";
         if($row['status']==0){
           $id = $row['id'];
-          echo "<div class='delete'><a href='delete.php?id=".$id."'><h2>x</h2></a></div>";
+          echo "<div style='width: 64px;
+          height: 64px;
+          background: #9e4545;
+          border-radius: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;' class='delete'><a style='text-decoration: none; color: white;' href='delete.php?id=".$id."'><h1>x</h1></a></div>";
         }
         
         echo  "</div>";
