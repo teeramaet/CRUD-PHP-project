@@ -1,4 +1,6 @@
-<?php require_once('connect.php'); 
+<?php
+session_start();
+require_once('connect.php'); 
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +22,16 @@
     <div class="content">
       <div class="left">
         <?php
-        $count = 3;
+        $stdID = $_SESSION['user_ID'];
+        $queryCount= "select * from student where Student_ID = $stdID";
+        $resultCount=$mysqli->query($queryCount);
+                  if(!$resultCount){
+                    echo "Select failed. Error: ".$mysqli->error ;
+                    return false;
+                  }
+        $rowCount = $resultCount->fetch_array()
         ?>
-        <div class="credit"><h1>CREDIT LEFT: <?= $count ?>/3</h1></div>
+        <div class="credit"><h1><?= "Count left: ".$rowCount['Count']. "/3" ?></h1></div>
         <div class="university">
           <div class="first-uni"><h2>University name</h2></div>
           <div class="second-uni"><h2>University name</h2></div>
@@ -58,16 +67,7 @@
             <h4><?= "GPA Requirement: ".$row['GPA_Requirement'] ?></h4>
             <h4><?= "English score: ".$row['Engscore_Requirement'] ?></h4>
             <textarea name="" id="" placeholder="Input your reason"></textarea>
-            <?php
-            if( isset( $_POST['add'] ) ) {
-              $q = "UPDATE student SET count = count - 1 WHERE student_ID = ;";
-              $result=$mysqli->query($q);
-                  if(!$result){
-                    echo "Select failed. Error: ".$mysqli->error ;
-                    return false;
-                  }
-          }
-            ?>
+            
             <form action="" method="post" class="add">
               <input type="submit" name="add" value="Add" class="add">
             </form>
@@ -75,6 +75,17 @@
         </div>
         <?php }
         ?>
+        <?php
+            $stdID = $_SESSION['user_ID'];
+            if( isset( $_POST['add'] ) ) {
+              $updateCount = "UPDATE student SET count = count - 1 WHERE student_ID = '$stdID';";
+              $resultupdateCount=$mysqli->query($updateCount);
+                  if(!$resultupdateCount){
+                    echo "Select failed. Error: ".$mysqli->error ;
+                    return false;
+                  }
+            }
+            ?>
         <!-- *****************************//-->
       </div>
     </div>
