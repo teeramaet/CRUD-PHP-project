@@ -9,12 +9,11 @@
   </head>
   <body>
     <nav class="navbar">
-      <a class="contact">CONTACT</a>
-      <a class="result">RESULT</a>
-      <a class="country">COUNTRY</a>
-      <a class="result">RESULT</a>
-      <a class="country">COUNTRY</a>
-      <a class="profile">PROFILE</a>
+      <a href="contactPage.php" class="contact">CONTACT</a>
+      <a href="congratPage.php" class="result">RESULT</a>
+      <a href = "countryPage.php" class="country">COUNTRY</a>
+      <a href = "editProfilePage.html" class="profile">PROFILE</a>
+      <a href = "loginPage.html" class="login">LOGIN</a>
     </nav>
     <div class="content">
       <div class="group">
