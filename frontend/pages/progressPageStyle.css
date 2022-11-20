@@ -24,6 +24,7 @@ body {
   align-items: center;
   background-color: #fffefa;
   padding-left: 30%;
+  padding-right: 2.5%;
 }
 .content {
   display: flex;
@@ -111,4 +112,13 @@ p {
   height: 34px;
   background: #9e4545;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  color: #fffefa;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
 }
