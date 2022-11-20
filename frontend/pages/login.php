@@ -29,7 +29,7 @@
 		//เอา username ส่งไปด้วย
     }
 	
-	$q="SELECT `Password` FROM `advisor` where ID='$ID' and `name`='$name'";
+    $q="SELECT `Password` FROM `advisor` where ID='$student_ID' and `name`='$fullname'";
 	$result=$mysqli->query($q);
 	$row=$result->fetch_array();
 	
