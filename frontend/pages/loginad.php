@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once('connect.php');
 $student_ID = $_POST['id'];
 $fullname = $_POST['fullname'];
@@ -25,6 +27,7 @@ if($row2['Password']!==$password){
 if($row2['Password']==$password){
 	$output="";
   //redirect ไปuserprofile
+  	$_SESSION["user_ID"] = $student_ID;
 	header("Location: requestPage.php?ID=$student_ID"); 
   //เอา username ส่งไปด้วย
     }
