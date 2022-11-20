@@ -21,7 +21,7 @@
 	}
 	
 	header("Location: loginPage.html"); 
-	$q="INSERT INTO student (Student_ID,Username,Password) 
+	$q="INSERT INTO student (Student_ID,name,Password) 
 		VALUES ('$Student_ID','$Username','$Password')";
 	$result=$mysqli->query($q);
 	if(!$result){
