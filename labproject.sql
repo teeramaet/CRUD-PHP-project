@@ -2,9 +2,9 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 20, 2022 at 12:53 PM
--- Server version: 10.4.21-MariaDB
+-- Host: localhost:3306
+-- Generation Time: Nov 20, 2022 at 01:10 PM
+-- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -33,19 +33,20 @@ CREATE TABLE `advisor` (
   `Phone` varchar(10) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `image_URL` varchar(600) NOT NULL,
-  `Region` varchar(30) NOT NULL
+  `Region` varchar(30) NOT NULL,
+  `password` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `advisor`
 --
 
-INSERT INTO `advisor` (`ID`, `Name`, `Phone`, `Email`, `image_URL`, `Region`) VALUES
-(0, 'Arthur Holms', '0812223333', 'AH@mail.com', 'https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'Europe'),
-(1, 'Ben Simsons', '0812223334', 'BS@mail.com', 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'Oceania'),
-(2, 'Wong Lee', '0812223335', 'WL@mail.com', 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'North America'),
-(3, 'Decap Prio', '0812223336', 'DP@mail.com', 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'ASIA'),
-(4, 'Rajeet Ishme', '0812223337', 'RI@mail.com', 'https://images.unsplash.com/photo-1657214059388-a35554015a42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8OHx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'South America');
+INSERT INTO `advisor` (`ID`, `Name`, `Phone`, `Email`, `image_URL`, `Region`, `password`) VALUES
+(0, 'Arthur Holms', '0812223333', 'AH@mail.com', 'https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'Europe', 'Arthur0'),
+(1, 'Ben Simsons', '0812223334', 'BS@mail.com', 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'Oceania', 'Ben1'),
+(2, 'Wong Lee', '0812223335', 'WL@mail.com', 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'North America', 'Wong2'),
+(3, 'Decap Prio', '0812223336', 'DP@mail.com', 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'ASIA', 'Decap3'),
+(4, 'Rajeet Ishme', '0812223337', 'RI@mail.com', 'https://images.unsplash.com/photo-1657214059388-a35554015a42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8OHx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60', 'South America', 'Ra4');
 
 -- --------------------------------------------------------
 

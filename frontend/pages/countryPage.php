@@ -1,3 +1,5 @@
+<?php require_once('connect.php'); 
+?> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,23 +36,33 @@
       </div>
       <div class="right">
         <!-- *****************************//-->
+        <?php
+        $q="select * from program p join university u on u.id = p.universityID";
+        $result=$mysqli->query($q);
+                  if(!$result){
+                    echo "Select failed. Error: ".$mysqli->error ;
+                    return false;
+                  }
+        while($row = $result->fetch_array()){?>
+
         <div class="card">
-          <img src="/frontend//assets/flag.png" alt="" />
+        <img src="<?= $row['image_URL'] ?>" alt="" />
           <div class="container">
             <div class="container-between">
-              <h3>University name:</h3>
+              <h3><?= $row['University_name'] ?></h3>
               <b>MORE</b>
             </div>
-            <h3>University name:</h3>
-            <h4>Country:</h4>
-            <h4>GPA Requirement</h4>
-            <h4>English score</h4>
+            <h4><?= $row['Country'] ?></h4>
+            <h4><?= "GPA Requirement: ".$row['GPA_Requirement'] ?></h4>
+            <h4><?= "English score: ".$row['Engscore_Requirement'] ?></h4>
             <textarea name="" id="">Input your reason</textarea>
             <div class="add">
               <p>Add</p>
             </div>
           </div>
         </div>
+        <?php }
+        ?>
         <!-- *****************************//-->
       </div>
     </div>
