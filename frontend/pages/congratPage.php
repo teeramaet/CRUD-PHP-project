@@ -22,8 +22,10 @@
           <h1>YOUR RESULT</h1>
         </div>
         <?php
+        session_start();
+        $Student_ID = $_SESSION["user_ID"];
         require_once('connect.php');
-        $q="SELECT u.University_name,p.status from progress p join university u on u.id = p.university_ID";
+        $q="SELECT u.University_name,p.status,p.id from progress p join university u on u.id = p.university_ID where p.Student_ID='$Student_ID'";
         $result=$mysqli->query($q);
         if(!$result){
           echo "Select failed. Error: ".$mysqli->error ;
@@ -44,7 +46,13 @@
         echo "<div class='choice' style='background-color:".$color."'>";
        
         echo    "<p class='choice-1' >choice "."$x".": ".$row['University_name']."</p>";
+        if($row['status']==0){
+          $id = $row['id'];
+          echo "<div class='delete'><a href='delete.php?id=".$id."'><h2>x</h2></a></div>";
+        }
+        
         echo  "</div>";
+       
         
         $x++;
         }

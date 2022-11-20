@@ -102,3 +102,12 @@ p {
   font-size: 1.5rem;
   font-weight: 500;
 }
+.delete {
+  width: 34px;
+  height: 34px;
+  background: #9e4545;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

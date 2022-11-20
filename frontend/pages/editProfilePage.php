@@ -8,8 +8,7 @@
     $npassword = $mysqli -> real_escape_string($_POST['npassword']);
     $opassword = $mysqli -> real_escape_string($_POST['opassword']);
 
-	$q="SELECT * From Student WHERE password='$opassword' and Student_ID ='$Student_ID'";
-    $result=$mysqli->query($q);
+	require_once('connect.php');
     
     if($result->num_rows != 1){
         //$message="Wrong password";
