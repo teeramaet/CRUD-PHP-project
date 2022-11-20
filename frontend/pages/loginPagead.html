@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="loginPageStyle.css" />
+  <body>
+    <nav class="navbar">
+      <a href="contactPage.php" class="contact">CONTACT</a>
+      <a href="congratPage.php" class="result">RESULT</a>
+      <a href = "countryPage.php" class="country">COUNTRY</a>
+      <a href = "editProfilePage.html" class="profile">PROFILE</a>
+      <a href = "loginPage.html" class="login">LOGIN</a>
+    </nav>
+    <div class="content">
+      <div class="pic-1"></div>
+      <div class="pic-2"></div>
+      <div class="left"></div>
+      <div class="right">
+        <h1>ADVISOR LOGIN</h1>
+        <form class="form-style" action="loginad.php" method="post">
+          <div class="ID">
+            <label>Advisor ID</label>
+            <input type="text"  name="id"/>
+          </div>
+
+          <div class="fullName">
+            <label>Full name</label>
+            <input type="text"  name="fullname"/>
+          </div>
+
+          <div class="password">
+            <label>Password</label>
+            <input type="password"  name="password"/>
+          </div>
+
+          <input type="submit" value="Sign in" class="submit" />
+        </form>
+        <p>
+          Don't have an account?
+          <span><a href="createAccountPage.html">Create Account</a></span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,60 +1,36 @@
 <?php
+	session_start();
+
+
 	require_once('connect.php');
 	$student_ID = $_POST['id'];
 	$fullname = $_POST['fullname'];
 	$password = $_POST['password'];
-
-
-
-	$q="SELECT `Password` FROM `student` where student_ID='$student_ID' and `name`='$fullname'";
- 	$result=$mysqli->query($q);
- 	$row=$result->fetch_array();
 	
-
-	
-	//no username
-	if(!$result){
-		$output="No username match";
-		//redirect กลับหน้าloginใหม่
-		header("Location: loginPage.html"); 
-    }
-	//wrong password
-	if($row['Password']!=$password){
-		$output="Wrong password";
-		//redirect กลับหน้าloginใหม่
-		header("Location: loginPage.html"); 
-    }
-	//correct password
-	if($row['Password']!=$pass){
-		$output="";
-		//redirect ไปuserprofile
-		header("Location: homePage.html?student_ID=$student_ID"); 
-		//เอา username ส่งไปด้วย
-    }
-	
-    $  $q="SELECT `Password` FROM `advisor` where ID='$student_ID' and `name`='$fullname'";
+	$q="SELECT Password FROM student where student_ID='$student_ID' and `name`='$fullname'";
 	$result=$mysqli->query($q);
-	$row=$result->fetch_array()
+	$row=$result->fetch_array();
 	
-	//no username
-	if(!$result){
+	
+	 //no username
+	if(isset($result)){
 		$output="No username match";
-		//redirect กลับหน้าloginใหม่
-		header("Location: loginPage.html"); 
-    }
-	//wrong password
+	  //redirect กลับหน้าloginใหม่
+		header("Location: loginPage.html?m=$output"); 
+		}
+	 //wrong password
 	if($row['Password']!=$password){
-		$output="Wrong password";
-		//redirect กลับหน้าloginใหม่
-		header("Location: loginPage.html"); 
-    }
-	//correct password
-	if($row['Password']!=$pass){
-		$output="";
-		//redirect ไปuserprofile
-		header("Location: requestPage.html?ID=$student_ID"); 
-		//เอา username ส่งไปด้วย
-    }
+		$output="Wrong password is".$row['Password'];
+	  //redirect กลับหน้าloginใหม่
+		header("Location: loginPage.html?m=$output"); 
+		}
+	 //correct password
+	if($row['Password']==$password){
+	  //redirect ไปuserprofile
+		  $_SESSION["user_ID"] = $student_ID;
+		header("Location: countryPage.php?student_ID=$student_ID"); 
+	  //เอา username ส่งไปด้วย
+		}
 
 	
 ?>
