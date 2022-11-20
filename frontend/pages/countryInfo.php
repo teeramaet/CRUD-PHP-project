@@ -21,7 +21,7 @@
     <div class="content">
     <?php
     $universityID = $_GET['ID'];
-        $q="select * from program p join university u on u.id = p.universityID WHERE u.id = universityID" ;
+        $q="select * from program p join university u on u.id = p.universityID WHERE u.id = $universityID" ;
         $result=$mysqli->query($q);
                   if(!$result){
                     echo "Select failed. Error: ".$mysqli->error ;
@@ -54,8 +54,9 @@
         />
         <img
           src="<?= $row['image_URL2'] ?>" 
+          alt=""
         />
-
+        <textarea name="" id="" placeholder="Input your reason"></textarea>
         <div class="add">
           <h5>Add</h5>
         </div>
