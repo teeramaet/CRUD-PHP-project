@@ -1,3 +1,6 @@
+<?php require_once('connect.php'); 
+
+?> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,26 +22,28 @@
     <div class="content">
       <div class="group">
         <div class="title"><h1>CONTACT US</h1></div>
-        <div class="tileGroup">
+        <?php
+        $q="select * from advisor";
+        $result=$mysqli->query($q);
+                  if(!$result){
+                    echo "Select failed. Error: ".$mysqli->error ;
+                    return false;
+                  }
+        while($row = $result->fetch_array()){?>
+          <div class="tileGroup">
           <div class="textGroup">
-            <h4>Oceania / Europe</h4>
-            <p>Ms. Panyaphat Sommai</p>
-            <p>Position: Regional coordinator (Incoming and Outgoing)</p>
-            <p>Tel.+66 (0)2 613 3023</p>
-            <p>E-mail: panyaphat.s@oia.tu.ac.th</p>
+            <p> <?= $row['Region'] ?></p>
+            <p> <?= $row['Name'] ?></p>
+            <p> <?= "Position: ".$row[''] ?></p>
+            <p> <?= "Tel: ".$row['Phone'] ?></p>
+            <p> <?= "E-mail: ".$row['Email'] ?></p>
+            <!-- <p>Position: Regional coordinator (Incoming and Outgoing)</p> -->
           </div>
-          <img src="/frontend/assets/business-man.png" alt="" />
+          <img src="<?= $row['image_URL'] ?>" alt="" />
         </div>
-        <div class="tileGroup">
-          <div class="textGroup">
-            <h4>Oceania / Europe</h4>
-            <p>Ms. Panyaphat Sommai</p>
-            <p>Position: Regional coordinator (Incoming and Outgoing)</p>
-            <p>Tel.+66 (0)2 613 3023</p>
-            <p>E-mail: panyaphat.s@oia.tu.ac.th</p>
-          </div>
-          <img src="/frontend/assets/business-man.png" alt="" />
-        </div>
+
+       <?php }
+        ?>
       </div>
     </div>
   </body>
