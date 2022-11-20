@@ -49,7 +49,7 @@
 	if($row['Password']!=$pass){
 		$output="";
 		//redirect ไปuserprofile
-		header("Location: requestPage.html?student_ID=$student_ID"); 
+		header("Location: requestPage.html?ID=$student_ID"); 
 		//เอา username ส่งไปด้วย
     }
 
