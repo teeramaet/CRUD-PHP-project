@@ -43,13 +43,13 @@
           $color='red';
           
         }
-        echo "<div class='choice' style='background-color:".$color."; display:flex; justify-content: space-between; padding: 0 5%;'>";
+        echo "<div class='choice' style='background-color:".$color."; display:flex; justify-content: space-between; padding: 0 5%; height: 20vh'>";
         
         echo "<h1 class='choice-1'style=' font-family: \'Source Sans Pro\', sans-serif;' >Your choice : ".$row['University_name']."</h1>";
         if($row['status']==0){
           $id = $row['id'];
-          echo "<div style='width: 64px;
-          height: 64px;
+          echo "<div style='width: 40px;
+          height: 40px;
           background: #9e4545;
           border-radius: 40px;
           display: flex;

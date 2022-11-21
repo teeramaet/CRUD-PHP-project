@@ -22,7 +22,7 @@ require_once('connect.php');
     <div class="content">
       <div class="left">
         
-        <div class="credit"><h1>YOU HAVE </br>1 CREDIT</h1></div>
+        <div class="credit"><h1>Choose your </br>Program</h1></div>
         <div class="university">
           <h2>Choose your dream university</h2>
         </div>
@@ -46,15 +46,15 @@ require_once('connect.php');
           <div class="container">
             <div class="container-between">
               <h3><?= $row['University_name'] ?></h3>
-              <a href="<?="countryInfo.php?ID=".$row['ID']?>,p_id=<?= $row['Program_ID'] ?>"<b>MORE</b></a>
+              <a href="<?="countryInfo.php?ID=".$row['ID']?>"<b>MORE</b></a>
             </div>
             <h4><?= $row['Country'] ?></h4>
             <h4><?= "GPA Requirement: ".$row['GPA_Requirement'] ?></h4>
-            <h4><?= "English score: ".$row['Engscore_Requirement'] ?></h4>
+            <h4><?= "English score: IELTS: ".$row['Engscore_Requirement'] ?></h4>
             
             
             <form action="countryPageadd.php" method="POST" class="">
-            <textarea name="essay" id="" placeholder="Input your reason"></textarea>
+            <textarea name="essay" row="10" id="" placeholder="Input your reason"></textarea>
               <input type='hidden' name="id" value='<?=$row['ID']?>'>
               <input type='hidden' name="p_ID" value='<?=$row['Program_ID']?>'>
               <input type='hidden' name="acb" value='<?=$row['Mangaeby']?>'>

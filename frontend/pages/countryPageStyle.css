@@ -81,6 +81,19 @@ h2,
   font-size: 2rem;
   margin-bottom: 7%;
 }
+form,
+textarea {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+textarea {
+  height: auto;
+}
 container-between > b {
   font-size: 1.25rem;
   font-family: "Source sans pro", sans-serif;
