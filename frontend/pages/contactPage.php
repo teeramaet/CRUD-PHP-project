@@ -31,8 +31,9 @@
           <div class="tileGroup">
           <div class="textGroup">
             <p> <?= $row['Region'] ?></p>
+            <br>
             <p> <?= $row['Name'] ?></p>
-            <p> <?= "Position: ".$row['Position'] ?></p>
+            <p>Position: Regional coordinator (Incoming and Outgoing)</p> 
             <p> <?= "Tel: ".$row['Phone'] ?></p>
             <p> <?= "E-mail: ".$row['Email'] ?></p>
             <!-- <p>Position: Regional coordinator (Incoming and Outgoing)</p> -->
