@@ -30,7 +30,7 @@
           $result=$mysqli->query($q);
           while($row=$result->fetch_array()){
                 echo  "<div class='option'>";
-                echo  "<a href='requestPageAccept.php?ProgressID=".$row['id']."'><h1>+</h1></a>";
+                echo  "<a style='text-decoration: none;' href='requestPageAccept.php?ProgressID=".$row['id']."'><h1>+</h1></a>";
                 echo  "<div class='choice'>";
                 echo      "<div class='request'>";
                 echo          "<p class='choice-1'>".$row['name']."</p>";
@@ -41,7 +41,7 @@
                 echo      "</div>";
                 echo      "<p>".$row['University_name']."</p>";
                 echo      "</div>";
-                echo       "<a href='requestPageDeny.php?ProgressID=".$row['id']."'><h1>-</h1></a>";
+                echo       "<a style='text-decoration: none;' href='requestPageDeny.php?ProgressID=".$row['id']."'><h1>-</h1></a>";
                 echo  "</div>"    ;
 
           }

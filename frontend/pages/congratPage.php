@@ -17,13 +17,17 @@
     </nav>
     <div class="content">
       <div class="group">
-        <div class="pic-1"></div>
         <div class="description">
           <h1>YOUR RESULT</h1>
         </div>
         <?php
         session_start();
         $Student_ID = $_SESSION["user_ID"];
+        $id=($_SESSION["user_ID"]);
+        if(! isset($id)){
+          header("Location: loginPage.html?");
+        }
+
         require_once('connect.php');
         $q="SELECT u.University_name,p.status,p.id from progress p join university u on u.id = p.university_ID where p.Student_ID='$Student_ID'";
         $result=$mysqli->query($q);

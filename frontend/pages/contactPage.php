@@ -21,6 +21,8 @@
       <div class="group">
         <div class="title"><h1>CONTACT US</h1></div>
         <?php
+        session_start();
+        unset($_SESSION["user_ID"]);
         $q="select * from advisor";
         $result=$mysqli->query($q);
                   if(!$result){

@@ -33,6 +33,12 @@ require_once('connect.php');
       <div class="right">
         <!-- *****************************//-->
         <?php
+        
+        $id=($_SESSION["user_ID"]);
+        if(! isset($id)){
+          header("Location: loginPage.html?");
+        }
+
         $q="select * from program p join university u on u.id = p.universityID";
         $result=$mysqli->query($q);
                   if(!$result){
